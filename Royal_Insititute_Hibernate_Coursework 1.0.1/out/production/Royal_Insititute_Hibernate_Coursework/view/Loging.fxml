@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1016.0" style="-fx-background-color: #0c2141;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <ImageView fitHeight="818.0" fitWidth="1142.0" layoutX="-118.0" layoutY="-117.0" opacity="0.03">
+         <image>
+            <Image url="@../asserts/trans.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="179.0" fitWidth="179.0" layoutX="423.0" layoutY="99.0">
+         <image>
+            <Image url="@../asserts/user.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUserName" focusColor="#ff8400" labelFloat="true" layoutX="308.0" layoutY="320.0" prefHeight="42.0" prefWidth="409.0" promptText="user_name" text="gayash" unFocusColor="WHITE" AnchorPane.leftAnchor="308.0" AnchorPane.rightAnchor="307.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" defaultButton="true" layoutX="450.0" layoutY="559.0" onMouseClicked="#btnCancelOnAction" opacity="0.71" prefHeight="42.0" prefWidth="126.0" ripplerFill="#01161b" style="-fx-background-color: RED; -fx-background-radius: 10;" text="CANCEL">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLoging" buttonType="RAISED" defaultButton="true" layoutX="419.0" layoutY="483.0" onMouseClicked="#btnLogingOnAction" prefHeight="42.0" prefWidth="187.0" ripplerFill="#01161b" style="-fx-background-color: green; -fx-background-radius: 10;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="847.0" layoutY="164.0" prefHeight="23.0" prefWidth="16.0" text="Label" />
+      <ImageView fx:id="btnClose" accessibleRole="BUTTON" fitHeight="42.0" fitWidth="36.0" focusTraversable="true" layoutX="967.0" layoutY="20.0" onMouseClicked="#btnCloseOnAction" onMouseEntered="#mouseEnter" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/Delete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXPasswordField fx:id="txtPw" focusColor="#ff8400" labelFloat="true" layoutX="308.0" layoutY="395.0" prefHeight="50.0" prefWidth="409.0" promptText="password" text="1234" unFocusColor="WHITE" AnchorPane.leftAnchor="308.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="395.0">
+         <font>
+            <Font size="14.0" />
+         </font></JFXPasswordField>
+      <JFXCheckBox fx:id="btnShowPw" layoutX="729.0" layoutY="414.0" onAction="#btnShowPwOnAction" opacity="0.64" text="show" textFill="WHITE" />
+      <Label layoutX="209.0" layoutY="33.0" text="ROYAL EDUCATION INSTITUTE" textFill="#fff7f7dc">
+         <font>
+            <Font name="Forte" size="42.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtpwtemp" focusColor="#ff8400" labelFloat="true" layoutX="309.0" layoutY="403.0" prefHeight="42.0" prefWidth="409.0" promptText="password" unFocusColor="WHITE" visible="false" AnchorPane.leftAnchor="308.0" AnchorPane.rightAnchor="307.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

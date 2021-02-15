@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="658.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
+   <children>
+      <JFXButton fx:id="btnAddNew" layoutX="702.0" layoutY="25.0" onMouseClicked="#btnAddNewOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #8D39FA; -fx-background-radius: 10; -fx-border-color: orange; -fx-border-radius: 10;" text="  NEW" textFill="WHITE" AnchorPane.bottomAnchor="590.0" AnchorPane.leftAnchor="702.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnNew" fitHeight="31.0" fitWidth="24.0" onMouseClicked="#btnNewOnAction">
+               <image>
+                  <Image url="@../asserts/Plus%20Math_100px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbNo" editable="true" labelFloat="true" layoutX="100.0" layoutY="103.0" onAction="#cmbNoOnAction" prefHeight="31.0" prefWidth="165.0" promptText="Registration Number" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="327.0" layoutY="14.0" prefHeight="21.0" prefWidth="260.0" text="REGISTRATOIN">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="37.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFee" editable="false" layoutX="100.0" layoutY="249.0" prefHeight="31.0" prefWidth="184.0" promptText="Fee(Rs.)">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXCheckBox fx:id="chkUpdate" layoutX="721.0" layoutY="123.0" onAction="#chkUpdateOnAction" text="update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXCheckBox>
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" layoutX="715.0" layoutY="149.0" onMouseClicked="#btnUpdateOnAction" prefHeight="31.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" layoutX="715.0" layoutY="242.0" onMouseClicked="#btnDeleteOnAction" prefHeight="31.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: RED;" text="DELETE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXCheckBox fx:id="chkDelete" layoutX="724.0" layoutY="216.0" onAction="#chkDeleteOnAction" text="delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <TableView fx:id="tblRegistration" layoutX="23.0" layoutY="308.0" prefHeight="335.0" prefWidth="812.0">
+        <columns>
+          <TableColumn fx:id="clmRegNo" prefWidth="161.0" text="Reg ID" />
+          <TableColumn fx:id="clmDate" prefWidth="142.0" text="Date" />
+            <TableColumn fx:id="clmFee" prefWidth="202.0" text="Fee(Rs)" />
+            <TableColumn fx:id="clmSid" prefWidth="151.0" text="SID" />
+            <TableColumn fx:id="clmCid" prefWidth="154.0" text="CID" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSid" editable="false" layoutX="451.0" layoutY="134.0" prefHeight="31.0" prefWidth="184.0" promptText="Student ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCid" editable="false" layoutX="451.0" layoutY="222.0" prefHeight="31.0" prefWidth="184.0" promptText="Course ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDate" editable="false" layoutX="100.0" layoutY="177.0" prefHeight="31.0" prefWidth="184.0" promptText="Date">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+   </children>
+</AnchorPane>

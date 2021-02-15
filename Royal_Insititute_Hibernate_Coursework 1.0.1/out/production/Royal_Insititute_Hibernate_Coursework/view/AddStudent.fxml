@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="658.0" prefWidth="471.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentController">
+   <children>
+      <Label layoutX="109.0" layoutY="23.0" text="ADD NEW STUDENT" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" layoutX="65.0" layoutY="134.0" prefHeight="31.0" prefWidth="194.0" promptText="ID" />
+      <JFXTextField fx:id="txtName" layoutX="67.0" layoutY="234.0" prefHeight="31.0" prefWidth="341.0" promptText="Name" />
+      <JFXTextField fx:id="txtAddress" layoutX="65.0" layoutY="314.0" prefHeight="31.0" prefWidth="341.0" promptText="Address" />
+      <JFXTextField fx:id="txtContact" layoutX="66.0" layoutY="395.0" prefHeight="31.0" prefWidth="215.0" promptText="Contact Num" />
+      <JFXComboBox fx:id="cmbGender" layoutX="305.0" layoutY="483.0" prefHeight="31.0" prefWidth="116.0" promptText="Gender" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" layoutX="193.0" layoutY="599.0" onMouseClicked="#btnSaveOnAction" prefHeight="31.0" prefWidth="137.0" ripplerFill="#09c4f8" style="-fx-background-color: green;" text="Save" textFill="WHITE" />
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" cancelButton="true" contentDisplay="CENTER" layoutX="343.0" layoutY="599.0" onMouseClicked="#btnCancelOnAction" prefHeight="31.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="Cancel" textFill="WHITE" />
+      <JFXDatePicker fx:id="txtDate" layoutX="60.0" layoutY="483.0" onMouseClicked="#txtDateOnAction" promptText="Birthday" />
+   </children>
+</AnchorPane>

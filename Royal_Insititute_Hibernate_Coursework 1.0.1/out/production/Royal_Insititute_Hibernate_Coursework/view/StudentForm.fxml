@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="658.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <Label layoutX="343.0" layoutY="16.0" prefHeight="21.0" prefWidth="160.0" text="STUDENT">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="37.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNew" layoutX="675.0" layoutY="22.0" onMouseClicked="#btnAddNewOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #8D39FA; -fx-background-radius: 10; -fx-border-color: orange; -fx-border-radius: 10;" text="  NEW" textFill="WHITE" AnchorPane.bottomAnchor="605.0" AnchorPane.leftAnchor="702.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="24.0">
+               <image>
+                  <Image url="@../asserts/Plus%20Math_100px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbId" editable="true" labelFloat="true" layoutX="67.0" layoutY="75.0" onAction="#cmbIdOnAction" prefHeight="31.0" prefWidth="172.0" promptText="Student ID" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtName" editable="false" layoutX="67.0" layoutY="142.0" prefHeight="31.0" prefWidth="279.0" promptText="Name">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtAddress" editable="false" layoutX="67.0" layoutY="213.0" prefHeight="31.0" prefWidth="279.0" promptText="Address">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtGender" editable="false" layoutX="480.0" layoutY="75.0" prefHeight="31.0" prefWidth="113.0" promptText="Gender">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtxBob" editable="false" layoutX="480.0" layoutY="142.0" prefHeight="31.0" prefWidth="172.0" promptText="Date of Birth">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtContact" editable="false" layoutX="480.0" layoutY="213.0" prefHeight="31.0" prefWidth="190.0" promptText="Contact">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXCheckBox fx:id="chkUpdate" layoutX="643.0" layoutY="258.0" onAction="#chkUpdateOnAction" text="update" AnchorPane.bottomAnchor="514.0" AnchorPane.rightAnchor="61.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXCheckBox>
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" layoutX="738.0" layoutY="253.0" onMouseClicked="#btnUpdateOnAction" prefHeight="31.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="UPDATE" textFill="WHITE" AnchorPane.bottomAnchor="478.0" AnchorPane.rightAnchor="28.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXCheckBox fx:id="chkDelete" layoutX="734.0" layoutY="226.0" onAction="#chkDeleteOnAction" text="delete" AnchorPane.bottomAnchor="421.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="226.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" layoutX="715.0" layoutY="252.0" onMouseClicked="#btnDeleteOnAction" prefHeight="31.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: RED;" text="DELETE" textFill="WHITE" AnchorPane.bottomAnchor="385.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="23.0" layoutY="308.0" prefHeight="335.0" prefWidth="812.0">
+        <columns>
+          <TableColumn fx:id="clmId" prefWidth="105.0" text="ID" />
+          <TableColumn fx:id="clmName" prefWidth="137.0" text="Name" />
+            <TableColumn fx:id="clmDob" prefWidth="139.0" text="DOB" />
+            <TableColumn fx:id="clmAddress" prefWidth="139.0" text="Address" />
+            <TableColumn fx:id="clmContact" minWidth="0.0" prefWidth="184.0" text="Contact Num" />
+            <TableColumn fx:id="clmGender" minWidth="0.0" prefWidth="107.0" text="Gender" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
